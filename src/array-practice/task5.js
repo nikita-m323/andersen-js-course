@@ -15,3 +15,13 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export function createGenerator(array) {
+  var nextIndex = 0;
+  return {
+    next: function() {
+      return nextIndex < array.length ? array[nextIndex++] : 'complete!';
+    },
+  };
+}
