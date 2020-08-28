@@ -14,3 +14,10 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+export function any(arr, foo) {
+  if (foo === undefined) return true;
+  const newArr = arr.filter(x => foo(x));
+  if (newArr.length === 0) return false;
+  return true;
+}
