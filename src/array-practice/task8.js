@@ -11,3 +11,8 @@
  * console.log(without([2, 1, 2, 3], 1, 2)) -> [3]
  * console.log(without([2, 1, 10, 20], 1, 2)) -> [10, 20]
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export function without(array, ...exclude) {
+  return array.filter(ele => exclude.includes(ele) === false);
+}

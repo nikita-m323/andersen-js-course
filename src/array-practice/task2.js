@@ -15,3 +15,16 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export function arrayDiff(arr1, arr2) {
+  const filteredArr1 = arr1.filter(function(ele) {
+    return arr2.includes(ele) === false;
+  });
+
+  const filteredArr2 = arr2.filter(function(ele) {
+    return arr1.includes(ele) === false;
+  });
+
+  return [...new Set([...filteredArr1, ...filteredArr2])];
+}
