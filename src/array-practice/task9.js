@@ -10,3 +10,14 @@
  * console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); -> [0, 3]
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export function indexOfAll(arr, num) {
+  const indices = [];
+  let idx = arr.indexOf(num);
+  while (idx !== -1) {
+    indices.push(idx);
+    idx = arr.indexOf(num, idx + 1);
+  }
+  return indices;
+}
