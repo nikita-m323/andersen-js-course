@@ -15,6 +15,7 @@
  * console.log(any([0, 0, 0, 0])); -> false
  */
 
+// eslint-disable-next-line import/prefer-default-export
 export function any(arr, foo) {
   if (foo === undefined) return true;
   const newArr = arr.filter(x => foo(x));
