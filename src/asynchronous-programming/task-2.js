@@ -17,4 +17,5 @@ function failureCb(error) {
   console.log(error);
 }
 
-export { parseJSON, successCb, failureCb };
+parseJSON('{"x": 10}', successCb, failureCb);
+parseJSON('{x}', successCb, failureCb);

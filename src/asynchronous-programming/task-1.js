@@ -11,4 +11,5 @@ const createCb = str => () => {
   console.log(str);
 };
 
-export { foo, createCb };
+foo(5, createCb(7));
+foo(20, createCb('cb'));

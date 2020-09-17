@@ -6,5 +6,4 @@ function deley(ms) {
   });
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export { deley };
+deley(1000).then(value => console.log(`Done with ${value}`));

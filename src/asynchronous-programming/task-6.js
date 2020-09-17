@@ -4,5 +4,11 @@ function getResolvePromice(value) {
   });
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export { getResolvePromice };
+getResolvePromice(500)
+  .then(response => {
+    if (response > 300) {
+      throw new Error('Ошибка');
+    }
+  })
+  .catch(e => console.log(e))
+  .finally(() => console.log('This is Finally'));

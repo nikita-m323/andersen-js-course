@@ -10,5 +10,4 @@ const getData = () => {
     });
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export { getData };
+getData();
